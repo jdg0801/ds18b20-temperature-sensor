@@ -21,12 +21,7 @@ float ReferenceRange = ReferenceHigh - ReferenceLow;
 void setup()
 {
   sensors.begin();	// Start up the library
-  Serial.begin(9600);
-  
-
-
-
-
+  Serial.begin(9600)
 }
 
 void loop()
@@ -40,7 +35,5 @@ void loop()
   float CorrectedValue = (((RawValue - RawLow) * ReferenceRange) / RawRange) + ReferenceLow;
   Serial.println(CorrectedValue);
   Serial.println("  Celsius");  
-  
- 
   delay(500);
 }
